@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "e7c61982-b61e-4268-8783-e0ec495d28e8",
+		"name": "TestSxoli",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19931232"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"dg@gmail.com\",\r\n    \"username\": \"hh\",\r\n    \"name\": \"dretna\",\r\n    \"lastname\": \"ert\",\r\n    \"password\": 1234\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.2.4:5000/register",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"2",
+						"4"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"dianapog@gmail.com\",\r\n    \"password\": 1234\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.2.5:5000/login",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"2",
+						"5"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createNote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Papapap\",\r\n    \"note\": \"mia barka sto gialo\",\r\n    \"keyword\": [\r\n        \"papa\", \"xoxoxo\", \"sperospero\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.2.5:5000/createNote",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"2",
+						"5"
+					],
+					"port": "5000",
+					"path": [
+						"createNote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getNoteWithTitle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.2.5:5000/getNoteWithTitle/sddsds",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"2",
+						"5"
+					],
+					"port": "5000",
+					"path": [
+						"getNoteWithTitle",
+						"sddsds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getNoteWithKeyword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.2.4:5000/getNoteWithKeyword/xoxoxo",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"2",
+						"4"
+					],
+					"port": "5000",
+					"path": [
+						"getNoteWithKeyword",
+						"xoxoxo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editNote",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"note\": \"to karabaki apo tin persia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.2.4:5000/editNote/tralala",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"2",
+						"4"
+					],
+					"port": "5000",
+					"path": [
+						"editNote",
+						"tralala"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteNote",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.2.4:5000/deleteNote/ssdfsdffs",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"2",
+						"4"
+					],
+					"port": "5000",
+					"path": [
+						"deleteNote",
+						"ssdfsdffs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllNotes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.2.4:5000/getAllNotes/asc",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"2",
+						"4"
+					],
+					"port": "5000",
+					"path": [
+						"getAllNotes",
+						"asc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAccount",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.2.4:5000/deleteAccount/hh",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"2",
+						"4"
+					],
+					"port": "5000",
+					"path": [
+						"deleteAccount",
+						"hh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"\",\r\n    \"email\":\"\",\r\n    \"password\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.2.4:5000/newAdmin",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"2",
+						"4"
+					],
+					"port": "5000",
+					"path": [
+						"newAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changepassA",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":5000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "changepassA",
+					"host": [
+						"changepassA"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
