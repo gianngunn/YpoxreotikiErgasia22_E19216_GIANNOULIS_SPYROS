@@ -25,6 +25,8 @@ app = Flask(__name__)
 logedin = 0
 logedinUser = None
 
+if User.count_documents({'role':'admin'}) == 0:
+    User.insert_one({'name':'admin', 'password':'admin', 'email':'admin@admin.com', 'role':'admin', 'changedPass': 'no'})
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -295,14 +297,13 @@ def logout():
 
     global logedin
     global logedinUser
-    print(logedin)
-    print(logedinUser)
+
     if logedin == 0 or logedinUser == None:
         return Response("login first!!", status=404)
+
     logedin = 0
     logedinUser = None
-    print(logedin)
-    print(logedinUser)
+
     return Response("loged out!!", status=200)
 
 
