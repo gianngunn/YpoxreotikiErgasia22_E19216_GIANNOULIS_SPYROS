@@ -7,7 +7,6 @@ Created on Tue Jun 28 19:26:59 2022
 
 import pymongo
 from pymongo import MongoClient
-from pymongo.errors import DuplicateKeyError
 from flask import Flask, request, Response, jsonify
 from datetime import datetime
 import json
@@ -373,40 +372,29 @@ def deleteUser(username):
     if logedinUser['role'] != 'admin':
         return Response('this is for admins only',status=405)
     
-    u = User.find_one({'username': username})
-    if u == None:
+    user = User.find_one({'username': username})
+    if user == None:
         return Response("No user!!", status=404)
     else:
-        Note.delete_many({'user': u['_id']})
-        User.delete_one({'username': u['username']})
+        Note.delete_many({'user': user['_id']})
+        User.delete_one({'username': user['username']})
         return Response('user deleted!!', status=200)
 
         return Response("You deleted your account!!", status=200)
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False, host='0.0.0.0', port=5000)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
